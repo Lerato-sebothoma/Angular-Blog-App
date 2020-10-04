@@ -1,0 +1,9 @@
+<a [routerLink]="['/myblog/addblog']">
+    <button class="btn btn-primary mb-4">Add Blog</button>
+</a>
+<a class="card bg-light mb-2 pl-3 pt-2" 
+    *ngFor="let blog of blogList"
+    [routerLink]="['/myblog', blog.id]"
+    style="text-decoration: none;">
+    <p style="color: black;font-weight: 600;">{{blog.name}}</p>
+</a>

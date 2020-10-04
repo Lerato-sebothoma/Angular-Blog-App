@@ -1,0 +1,6 @@
+.home{
+    background: url(src\assets\images\cupcake.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    padding: 0 10%;
+}

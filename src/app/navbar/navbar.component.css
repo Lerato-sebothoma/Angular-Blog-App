@@ -1,0 +1,11 @@
+.dd-logo{
+    font-weight: bolder;   
+}
+
+.dd-logo:hover{
+    color: rgb(173, 57, 57);
+}
+
+ul:hover{
+    color: rgb(173, 57, 57);
+}

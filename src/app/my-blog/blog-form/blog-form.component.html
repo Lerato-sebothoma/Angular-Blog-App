@@ -1,0 +1,20 @@
+<div class="container card bg-light pb-3 pt-3">
+    <form #formValidation="ngForm">
+        <div class="form-group">
+            <div class="d-flex justify-content-between align-items-center">
+              <label for="name">Name</label>
+            </div>
+            <input required class="form-Validation" type="text"  id="name" name="name" [(ngModel)]="blog.name" #nameValidation="ngModel" style="width: 100%;">           
+            <p class="error-message mb-1" *ngIf="nameValidation.invalid && nameValidation.touched" style="color: orange;">Please Enter  valid Name</p>
+          </div>
+
+          <div class="form-group">
+            <div class="d-flex  align-items-center justify-content-between">
+              <label for="description">description</label>
+            </div>
+            <textarea rows="5" required class="form-Validation" type="text"  id="description" name="description" [(ngModel)]="blog.description" #descriptionValidation="ngModel" style="width: 100%;"></textarea>       
+            <p class="error-message mb-1" *ngIf="descriptionValidation.invalid && descriptionValidation.touched" style="color: orange;">Please Enter  valid Description</p>  
+        </div>
+          <button type="button" [disabled]="formValidation.invalid" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    </form>
+</div>
